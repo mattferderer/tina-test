@@ -24,7 +24,7 @@ blocks:
       src: >-
         https://res.cloudinary.com/forestry-demo/image/upload/v1628102029/tina-cloud-starter/tina-illustration.WebP
       alt: Tina
-    color: default
+    color: primary
     _template: hero
   - items:
       - icon:
