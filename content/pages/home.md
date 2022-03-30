@@ -2,7 +2,7 @@
 blocks:
   - headline: Welcome to the Tina Starter!!
     text: |
-      This project is set up to show you the basics of working with Tina. !!!!
+      This is Tina CMS!
     actions:
       - label: Action Label
         type: button
