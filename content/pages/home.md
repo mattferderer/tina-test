@@ -1,6 +1,6 @@
 ---
 blocks:
-  - headline: Welcome to the Tina Starter???
+  - headline: Welcome to the Tina Starter!!
     text: |
       This project is set up to show you the basics of working with Tina. !!!!
     actions:
