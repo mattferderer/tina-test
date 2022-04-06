@@ -1,5 +1,16 @@
 ---
 blocks:
+  - headline: Find Your
+    tagline: Best Self
+    alignTextBox: center-right
+    alignText: text-center
+    actions:
+      - label: START YOUR JOURNEY
+        type: button
+        icon: false
+        link: /
+    justifyActions: justify-center
+    _template: banner
   - headline: Welcome to the Tina Starter!!
     text: |
       This is Tina CMS!
@@ -14,7 +25,7 @@ blocks:
         link: /posts
     image:
       src: >-
-        https://res.cloudinary.com/forestry-demo/image/upload/v1628102029/tina-cloud-starter/tina-illustration.WebP
+        https://res.cloudinary.com/duxu6egoi/image/upload/v1649188983/cld-sample.jpg
       alt: Tina
     color: tint
     _template: hero

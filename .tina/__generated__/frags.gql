@@ -55,6 +55,20 @@ fragment AuthorsParts on Authors {
 fragment PagesParts on Pages {
   blocks {
     __typename
+    ... on PagesBlocksBanner {
+      headline
+      tagline
+      alignTextBox
+      alignText
+      actions {
+        __typename
+        label
+        type
+        icon
+        link
+      }
+      justifyActions
+    }
     ... on PagesBlocksHero {
       tagline
       headline

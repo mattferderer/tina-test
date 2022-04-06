@@ -719,6 +719,225 @@
           },
           "templates": [
             {
+              "name": "banner",
+              "label": "Banner",
+              "ui": {
+                "previewSrc": "/blocks/banner.jpg",
+                "defaultItem": {
+                  "tagline": "Find Your",
+                  "headline": "Best Self"
+                }
+              },
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Headline",
+                  "name": "headline",
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "headline"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Tagline",
+                  "name": "tagline",
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "tagline"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Align Text Box",
+                  "name": "alignTextBox",
+                  "options": [
+                    {
+                      "value": "top-right",
+                      "label": "Top Right"
+                    },
+                    {
+                      "value": "top-left",
+                      "label": "Top Left"
+                    },
+                    {
+                      "value": "top-center",
+                      "label": "Top Center"
+                    },
+                    {
+                      "value": "bottom-right",
+                      "label": "Bottom Right"
+                    },
+                    {
+                      "value": "bottom-left",
+                      "label": "Bottom Left"
+                    },
+                    {
+                      "value": "bottom-center",
+                      "label": "Bottom Center"
+                    },
+                    {
+                      "value": "center-right",
+                      "label": "Center Right"
+                    },
+                    {
+                      "value": "center-left",
+                      "label": "Center Left"
+                    },
+                    {
+                      "value": "center-center",
+                      "label": "Center Center"
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "alignTextBox"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Align Text",
+                  "name": "alignText",
+                  "options": [
+                    {
+                      "value": "text-left",
+                      "label": "Left"
+                    },
+                    {
+                      "value": "text-center",
+                      "label": "Center"
+                    },
+                    {
+                      "value": "text-right",
+                      "label": "Right"
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "alignText"
+                  ]
+                },
+                {
+                  "label": "Actions",
+                  "name": "actions",
+                  "type": "object",
+                  "list": true,
+                  "ui": {
+                    "defaultItem": {
+                      "label": "Action Label",
+                      "type": "button",
+                      "icon": true,
+                      "link": "/"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "label": "Label",
+                      "name": "label",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "blocks",
+                        "banner",
+                        "actions",
+                        "label"
+                      ]
+                    },
+                    {
+                      "label": "Type",
+                      "name": "type",
+                      "type": "string",
+                      "options": [
+                        {
+                          "label": "Button",
+                          "value": "button"
+                        },
+                        {
+                          "label": "Link",
+                          "value": "link"
+                        }
+                      ],
+                      "namespace": [
+                        "pages",
+                        "blocks",
+                        "banner",
+                        "actions",
+                        "type"
+                      ]
+                    },
+                    {
+                      "label": "Icon",
+                      "name": "icon",
+                      "type": "boolean",
+                      "namespace": [
+                        "pages",
+                        "blocks",
+                        "banner",
+                        "actions",
+                        "icon"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "link",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "blocks",
+                        "banner",
+                        "actions",
+                        "link"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "actions"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Align Actions",
+                  "name": "justifyActions",
+                  "options": [
+                    {
+                      "value": "justify-start",
+                      "label": "Left"
+                    },
+                    {
+                      "value": "justify-center",
+                      "label": "Center"
+                    },
+                    {
+                      "value": "justify-end",
+                      "label": "Right"
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "justifyActions"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "blocks",
+                "banner"
+              ]
+            },
+            {
               "name": "hero",
               "label": "Hero",
               "ui": {

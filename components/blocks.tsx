@@ -1,5 +1,6 @@
 import React from "react";
 import type { Pages } from "../.tina/__generated__/types";
+import { Banner } from "./blocks/banner";
 import { Content } from "./blocks/content";
 import { Features } from "./blocks/features";
 import { Hero } from "./blocks/hero";
@@ -10,7 +11,17 @@ export const Blocks = (props: Pages) => {
     <>
       {props.blocks
         ? props.blocks.map(function (block, i) {
-            switch (block.__typename) {
+          switch (block.__typename) {
+            case "PagesBlocksBanner":
+              return (
+                <div
+                  data-tinafield={`blocks.${i}`}
+                  key={i + block.__typename}
+                >
+                  <Banner data={block} parentField={`blocks.${i}`} />
+                </div>
+              );
+            
               case "PagesBlocksContent":
                 return (
                   <div

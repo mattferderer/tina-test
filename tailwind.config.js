@@ -47,7 +47,7 @@ module.exports = {
       },
       orange: {
         200: "#EB7752",
-        300: "#EA6C45",
+        300: "#f47e3a", // Proximal orange
         400: "#E85C30",
         500: "#EC4815",
         600: "#DC4419",
@@ -63,6 +63,7 @@ module.exports = {
       "2xl": "1800px",
     },
     fontSize: {
+      "2xs": ".5rem",
       xs: ".875rem",
       sm: "1rem",
       base: "1.125rem",
@@ -94,6 +95,9 @@ module.exports = {
       },
       spacing: {
         128: "32rem",
+        256: "64rem",
+        384: "96rem",
+        512: "128rem",
       },
       zIndex: {
         "-1": "-1",

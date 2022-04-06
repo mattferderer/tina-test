@@ -202,6 +202,22 @@ type AuthorsConnection implements Connection {
   edges: [AuthorsConnectionEdges]
 }
 
+type PagesBlocksBannerActions {
+  label: String
+  type: String
+  icon: Boolean
+  link: String
+}
+
+type PagesBlocksBanner {
+  headline: String
+  tagline: String
+  alignTextBox: String
+  alignText: String
+  actions: [PagesBlocksBannerActions]
+  justifyActions: String
+}
+
 type PagesBlocksHeroActions {
   label: String
   type: String
@@ -251,7 +267,7 @@ type PagesBlocksTestimonial {
   color: String
 }
 
-union PagesBlocks = PagesBlocksHero | PagesBlocksFeatures | PagesBlocksContent | PagesBlocksTestimonial
+union PagesBlocks = PagesBlocksBanner | PagesBlocksHero | PagesBlocksFeatures | PagesBlocksContent | PagesBlocksTestimonial
 
 type Pages {
   blocks: [PagesBlocks]
@@ -354,6 +370,22 @@ input AuthorsMutation {
   avatar: String
 }
 
+input PagesBlocksBannerActionsMutation {
+  label: String
+  type: String
+  icon: Boolean
+  link: String
+}
+
+input PagesBlocksBannerMutation {
+  headline: String
+  tagline: String
+  alignTextBox: String
+  alignText: String
+  actions: [PagesBlocksBannerActionsMutation]
+  justifyActions: String
+}
+
 input PagesBlocksHeroActionsMutation {
   label: String
   type: String
@@ -404,6 +436,7 @@ input PagesBlocksTestimonialMutation {
 }
 
 input PagesBlocksMutation {
+  banner: PagesBlocksBannerMutation
   hero: PagesBlocksHeroMutation
   features: PagesBlocksFeaturesMutation
   content: PagesBlocksContentMutation

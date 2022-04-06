@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Actions } from "../actions";
+import { Actions, ActionsFields } from "../actions";
 import { Container } from "../container";
 import { Section } from "../section";
 import { ThemeContext } from "../theme";
@@ -114,46 +114,7 @@ export const heroBlockSchema: TinaTemplate = {
       name: "text",
       type: "rich-text",
     },
-    {
-      label: "Actions",
-      name: "actions",
-      type: "object",
-      list: true,
-      ui: {
-        defaultItem: {
-          label: "Action Label",
-          type: "button",
-          icon: true,
-          link: "/",
-        },
-      },
-      fields: [
-        {
-          label: "Label",
-          name: "label",
-          type: "string",
-        },
-        {
-          label: "Type",
-          name: "type",
-          type: "string",
-          options: [
-            { label: "Button", value: "button" },
-            { label: "Link", value: "link" },
-          ],
-        },
-        {
-          label: "Icon",
-          name: "icon",
-          type: "boolean",
-        },
-        {
-          label: "Link",
-          name: "link",
-          type: "string",
-        },
-      ],
-    },
+    ActionsFields,
     {
       type: "object",
       label: "Image",

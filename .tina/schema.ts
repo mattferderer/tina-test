@@ -3,6 +3,7 @@ import type { TinaTemplate, TinaField } from "tinacms";
 import { contentBlockSchema } from "../components/blocks/content";
 import { featureBlockShema } from "../components/blocks/features";
 import { heroBlockSchema } from "../components/blocks/hero";
+import { bannerBlockSchema } from "../components/blocks/banner";
 import { testimonialBlockSchema } from "../components/blocks/testimonial";
 import { iconSchema } from "../components/icon";
 
@@ -337,6 +338,7 @@ export default defineSchema({
             visualSelector: true,
           },
           templates: [
+            bannerBlockSchema,
             heroBlockSchema,
             featureBlockShema,
             contentBlockSchema,

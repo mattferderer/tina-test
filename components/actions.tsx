@@ -1,6 +1,8 @@
 import Link from "next/link";
 import * as React from "react";
+import { ReactNode } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { TinaFieldInner } from "tinacms/dist/types";
 import { ThemeContext } from "./theme";
 
 export const Actions = ({
@@ -56,20 +58,16 @@ export const Actions = ({
   };
 
   return (
-    <div className={`flex flex-wrap items-center gap-y-4 gap-x-6 ${className}`}>
+    <div className={`flex flex-wrap items-center gap-y-4 gap-x-6  ${className}`}>
       {actions &&
-        actions.map(function (action, index) {
+        actions.map(function (action: ActionProps, index) {
           let element = null;
           if (action.type === "button") {
             element = (
               <Link key={index} href={action.link ? action.link : "/"}>
                 <button
                   data-tinafield={`${parentField}.${index}`}
-                  className={`z-10 relative flex items-center px-7 py-3 font-semibold text-lg transition duration-150 ease-out  rounded transform focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap ${
-                    parentColor === "primary"
-                      ? invertedButtonColorClasses[theme.color]
-                      : buttonColorClasses[theme.color]
-                  }`}
+                  className={`z-10 bg-white text-gray-500 font-bold text-xs lg:text-sm uppercase p-2 lg:p-4`}
                 >
                   {action.label}
                   {action.icon && (
@@ -109,4 +107,51 @@ export const Actions = ({
         })}
     </div>
   );
+};
+export interface ActionProps {
+  link: string;
+  label: ReactNode;
+  icon: JSX.Element;
+  type: 'button' | 'link' | 'linkExternal';
+}
+
+export const ActionsFields:TinaFieldInner<false> = {
+  label: "Actions",
+  name: "actions",
+  type: "object",
+  list: true,
+  ui: {
+    defaultItem: {
+      label: "Action Label",
+      type: "button",
+      icon: true,
+      link: "/",
+    },
+  },
+  fields: [
+    {
+      label: "Label",
+      name: "label",
+      type: "string",
+    },
+    {
+      label: "Type",
+      name: "type",
+      type: "string",
+      options: [
+        { label: "Button", value: "button" },
+        { label: "Link", value: "link" },
+      ],
+    },
+    {
+      label: "Icon",
+      name: "icon",
+      type: "boolean",
+    },
+    {
+      label: "Link",
+      name: "link",
+      type: "string",
+    },
+  ],
 };

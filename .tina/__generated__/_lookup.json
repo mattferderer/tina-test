@@ -65,6 +65,7 @@
     "type": "PagesBlocks",
     "resolveType": "unionData",
     "typeMap": {
+      "banner": "PagesBlocksBanner",
       "hero": "PagesBlocksHero",
       "features": "PagesBlocksFeatures",
       "content": "PagesBlocksContent",
