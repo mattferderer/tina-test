@@ -25,7 +25,9 @@ export interface BannerPropsData {
 
 export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField }) => {
   const myLoader = ({ src }) => {
-    return `http://localhost:3000${src}`;
+    return process.env.NODE_ENV === 'development'
+      ? `http://localhost:3000${src}`
+      : `https://tina-test-beta.vercel.app${src}`;
   }
 
   const alignTextOuterWrapper = () => {
