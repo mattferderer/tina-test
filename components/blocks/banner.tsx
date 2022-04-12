@@ -18,8 +18,9 @@ export interface BannerPropsData {
   tagline: string;
   actions: ActionProps[];
   justifyActions: "justify-center" | "justify-start" | "justify-end";
-  alignTextBox: "top-right" | "top-left" | "top-center" | "bottom-right" | "bottom-left" | "bottom-center" | "center-right" | "center-left" | "center-center";
+  alignTextBox: "top-right" | "top-left" | "top-center" | "bottom-right" | "bottom-left" | "bottom-center" | "middle-right" | "middle-left" | "middle-center";
   alignText: "left" | "right" | "center";
+  bgImage: "Amanda" | "Weights";
 }
 
 export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField }) => {
@@ -32,7 +33,7 @@ export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField
       case ("top-center"):
         return "grid-cols-1 items-start justify-center";
       
-      case ("center-center"):
+      case ("middle-center"):
       default:
         return "grid-cols-1 place-items-center";
       
@@ -50,10 +51,10 @@ export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField
       case ("bottom-center"):
         return "grid-cols-1 items-end";
       
-      case ("center-right"):
+      case ("middle-right"):
         return "grid-cols-2 items-center"
       
-      case ("center-left"):
+      case ("middle-left"):
         return "grid-cols-2 items-center justify-start";
     }
   }
@@ -72,11 +73,11 @@ export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField
         return "";
       case ("bottom-center"):
         return "";
-      case ("center-right"):
+      case ("middle-right"):
         return "col-start-2";
-      case ("center-left"):
+      case ("middle-left"):
         return "";
-      case ("center-center"):
+      case ("middle-center"):
       default:
         return "";
     }
@@ -90,7 +91,7 @@ export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField
         <Image
           loader={myLoader}
           alt="Woman in black tank top with hands on hips"
-          src="/components/Banner/Amanda.jpg"
+          src={`/components/Banner/${data.bgImage}.jpg`}
           layout="fill"
           objectFit="cover"
           objectPosition="top"
@@ -131,6 +132,12 @@ export const bannerBlockSchema: TinaTemplate = {
   fields: [
     {
       type: "string",
+      label: "Background Image",
+      name: "bgImage",
+      options: ["Amanda", "Weights"],
+    },
+    {
+      type: "string",
       label: "Headline",
       name: "headline",
     },
@@ -150,9 +157,9 @@ export const bannerBlockSchema: TinaTemplate = {
         { value: "bottom-right", label: "Bottom Right" },
         { value: "bottom-left", label: "Bottom Left" },
         { value: "bottom-center", label: "Bottom Center" },
-        { value: "center-right", label: "Center Right" },
-        { value: "center-left", label: "Center Left" },
-        { value: "center-center", label: "Center Center" },
+        { value: "middle-right", label: "Middle Right" },
+        { value: "middle-left", label: "Middle Left" },
+        { value: "middle-center", label: "Middle Center" },
       ],
     },
     {

@@ -1,6 +1,7 @@
 ---
 blocks:
-  - headline: Find Your
+  - bgImage: Amanda
+    headline: Find Your
     tagline: Best Self
     alignTextBox: center-right
     alignText: text-center

@@ -2883,6 +2883,21 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
+            "value": "bgImage"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
             "value": "headline"
           },
           "arguments": [],
@@ -5025,6 +5040,20 @@
         "value": "PagesBlocksBannerMutation"
       },
       "fields": [
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "bgImage"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
         {
           "kind": "InputValueDefinition",
           "name": {

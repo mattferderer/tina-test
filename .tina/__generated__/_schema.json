@@ -731,6 +731,21 @@
               "fields": [
                 {
                   "type": "string",
+                  "label": "Background Image",
+                  "name": "bgImage",
+                  "options": [
+                    "Amanda",
+                    "Weights"
+                  ],
+                  "namespace": [
+                    "pages",
+                    "blocks",
+                    "banner",
+                    "bgImage"
+                  ]
+                },
+                {
+                  "type": "string",
                   "label": "Headline",
                   "name": "headline",
                   "namespace": [
@@ -781,16 +796,16 @@
                       "label": "Bottom Center"
                     },
                     {
-                      "value": "center-right",
-                      "label": "Center Right"
+                      "value": "middle-right",
+                      "label": "Middle Right"
                     },
                     {
-                      "value": "center-left",
-                      "label": "Center Left"
+                      "value": "middle-left",
+                      "label": "Middle Left"
                     },
                     {
-                      "value": "center-center",
-                      "label": "Center Center"
+                      "value": "middle-center",
+                      "label": "Middle Center"
                     }
                   ],
                   "namespace": [

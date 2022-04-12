@@ -56,6 +56,7 @@ fragment PagesParts on Pages {
   blocks {
     __typename
     ... on PagesBlocksBanner {
+      bgImage
       headline
       tagline
       alignTextBox

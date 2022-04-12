@@ -210,6 +210,7 @@ type PagesBlocksBannerActions {
 }
 
 type PagesBlocksBanner {
+  bgImage: String
   headline: String
   tagline: String
   alignTextBox: String
@@ -378,6 +379,7 @@ input PagesBlocksBannerActionsMutation {
 }
 
 input PagesBlocksBannerMutation {
+  bgImage: String
   headline: String
   tagline: String
   alignTextBox: String
