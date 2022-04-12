@@ -109,10 +109,10 @@ export const Actions = ({
   );
 };
 export interface ActionProps {
-  link: string;
-  label: ReactNode;
-  icon: JSX.Element;
-  type: 'button' | 'link' | 'linkExternal';
+  link?: string;
+  label?: string;
+  icon?: boolean;
+  type?: string; //'button' | 'link' | 'linkExternal'
 }
 
 export const ActionsFields:TinaFieldInner<false> = {

@@ -14,13 +14,13 @@ export interface BannerProps {
 }
 
 export interface BannerPropsData {
-  headline: string;
-  tagline: string;
-  actions: ActionProps[];
-  justifyActions: "justify-center" | "justify-start" | "justify-end";
-  alignTextBox: "top-right" | "top-left" | "top-center" | "bottom-right" | "bottom-left" | "bottom-center" | "middle-right" | "middle-left" | "middle-center";
-  alignText: "left" | "right" | "center";
-  bgImage: "Amanda" | "Weights";
+  headline?: string;
+  tagline?: string;
+  actions?: ActionProps[];
+  justifyActions?: string;// "justify-center" | "justify-start" | "justify-end";
+  alignTextBox?: string; // "top-right" | "top-left" | "top-center" | "bottom-right" | "bottom-left" | "bottom-center" | "middle-right" | "middle-left" | "middle-center";
+  alignText?: string;  // "left" | "right" | "center";
+  bgImage?: string;  // "Amanda" | "Weights";
 }
 
 export const Banner: React.FunctionComponent<BannerProps> = ({ data, parentField }) => {
