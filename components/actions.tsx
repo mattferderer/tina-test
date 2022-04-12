@@ -2,7 +2,7 @@ import Link from "next/link";
 import * as React from "react";
 import { ReactNode } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { TinaFieldInner } from "tinacms/dist/types";
+import { TinaFieldInner } from "tinacms/dist/types/SchemaTypes";
 import { ThemeContext } from "./theme";
 
 export const Actions = ({
