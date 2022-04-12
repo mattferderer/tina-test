@@ -3,7 +3,7 @@ blocks:
   - bgImage: Amanda
     headline: Find Your
     tagline: Best Self
-    alignTextBox: center-right
+    alignTextBox: middle-right
     alignText: text-center
     actions:
       - label: START YOUR JOURNEY
